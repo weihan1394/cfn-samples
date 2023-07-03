@@ -1,0 +1,16 @@
+# Create two SSE-S3 encrypted buckets.
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  bucket1:
+    Type: "AWS::S3::Bucket"
+    UpdateReplacePolicy: "Retain"
+    DeletionPolicy: "Retain"
+    Properties:
+      BucketName: "wh-src"
+
+  bucket2:
+    Type: "AWS::S3::Bucket"
+    UpdateReplacePolicy: "Retain"
+    DeletionPolicy: "Retain"
+    Properties:
+      BucketName: "wh-dest"
